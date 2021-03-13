@@ -1,0 +1,30 @@
+-- ----------------------------
+-- 数据源配置表
+-- ----------------------------
+CREATE TABLE `TB_DATAAPI_CONFIGURATION` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `NAME` varchar(50) NOT NULL COMMENT '名称',
+  `DESC` varchar(100) DEFAULT NULL COMMENT '描述',
+  `CONTENT` text COMMENT '数据源配置（mysql-postgreSQL）',
+  `ADD_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `UPD_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='数据源配置表';
+
+
+-- ----------------------------
+-- 数据映射配置表
+-- ----------------------------
+CREATE TABLE `TB_DATAAPI_MAPPERS` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `CONFIGURATION_ID` int(11) NOT NULL COMMENT '配置ID',
+  `URI` varchar(50) NOT NULL COMMENT 'API接口路径',
+  `NAME` varchar(50) NOT NULL COMMENT '名称',
+  `DESC` varchar(100) DEFAULT NULL COMMENT '描述',
+  `CONTENT` text COMMENT '接口xml配置内容',
+  `ENABLE` int(11) DEFAULT NULL COMMENT '是否启用',
+  `ADD_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `UPD_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_uri` (`URI`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COMMENT='数据映射配置表';

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="industTop7" type="Map">
+      <result property="pubShortName" column="pub_short_name" />
+      <result property="ac" column="ac"/>
+    </resultMap>
+
+   <select id="execute" resultMap="industTop7">    
+    SELECT
+      pub_short_name, ac
+    FROM
+      bi_screen_ac_pub_month
+    WHERE
+    dt = 
+        IF(
+            #{month} IS NOT NULL,
+            DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                IF(
+                    CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                    DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                    DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                )
+        )
+        AND pub_short_name IS NOT NULL
+
+        AND pub_short_name   <![CDATA[ <> ]]> '测试092302'
+    ORDER BY
+      ac DESC
+    LIMIT
+      10
+    </select>    
+</mapper>

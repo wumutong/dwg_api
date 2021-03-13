@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="numSendCnt" type="Map">
+      <result property="num" column="num" />
+      <result property="ac" column="ac"/> 
+    </resultMap>
+
+   <select id="execute" resultMap="numSendCnt">    
+      
+      <if test="num != null">
+
+      SELECT
+        dt as month,num, ac
+      FROM
+        bi_screen_ac_num_month
+      WHERE
+          dt = DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m')
+          AND num = #{num}
+
+      ORDER BY ac DESC
+
+      </if>
+
+      <if test="num == null">
+
+      SELECT
+         dt as month,num, ac
+      FROM
+        bi_screen_ac_num_month_topn
+      WHERE
+          dt = DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m')
+
+      ORDER BY ac DESC
+
+      </if>
+
+    </select>    
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="sceneRecogitionCnt" type="Map">
+      <result property="recogitionCnt" column="recognition_cnt" />
+      <result property="sceneName" column="scene_name"/>
+    </resultMap>
+
+   <select id="execute" resultMap="sceneRecogitionCnt">    
+    SELECT
+      scene_name, recognition_cnt
+    FROM
+      bi_screen_scene_recognition_month
+    WHERE
+        dt = 
+            IF(
+                #{month} IS NOT NULL,
+                DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                    IF(
+                        CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                        DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                        DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                    )
+            )
+        and scene_name is not null
+    ORDER BY
+      recognition_cnt DESC
+    </select>    
+</mapper>

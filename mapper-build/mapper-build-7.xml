@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="URLAcKnow" type="Map">
+      <result property="currentAllCnt" column="currentAllCnt" />
+      <result property="lastAllCnt" column="lastAllCnt"/>
+      <result property="whitelistCnt" column="whitelist_cnt"/>
+      <result property="whitelistAccount" column="whitelistAccount" />
+      <result property="blacklistCnt" column="blacklist_cnt"/>
+      <result property="blacklistCntAccount" column="blacklistCntAccount"/>
+      <result property="unknownCnt" column="unknown_cnt" />
+      <result property="unknownAccount" column="unknownAccount"/>
+      <result property="lastBlacklistCnt" column="lastBlacklistCnt"/>
+      <result property="BlacklistCntChange" column="BlacklistCntChange"/>
+      <result property="currentAcRate" column="currentAcRate" />
+      <result property="lastAcRate" column="lastAcRate"/>
+    </resultMap>
+
+   <select id="execute" resultMap="URLAcKnow">    
+    SELECT
+      a.all_cnt as currentAllCnt,
+      b.all_cnt as lastAllCnt,
+      round(a.all_cnt/(a.all_cnt+b.all_cnt)*100,2) as currentAcRate,
+      round(b.all_cnt/(a.all_cnt+b.all_cnt)*100,2) as lastAcRate,
+      a.whitelist_cnt,
+      CONCAT(cast(ROUND(a.whitelist_cnt / a.all_cnt * 100, 3) as char), '%') as whitelistAccount,
+      a.blacklist_cnt,
+      CONCAT(cast(ROUND(a.blacklist_cnt / a.all_cnt * 100, 3) as char), '%') as blacklistCntAccount,
+      a.unknown_cnt,
+      CONCAT(cast(ROUND(a.unknown_cnt / a.all_cnt * 100, 3) as char), '%') as unknownAccount,
+      b.blacklist_cnt as lastBlacklistCnt,
+      CONCAT(cast(ROUND(a.blacklist_cnt / b.blacklist_cnt * 100 - 100, 3) as char), '%') as BlacklistCntChange
+  FROM
+      (
+          SELECT
+              ROUND((whitelist_cnt/100000000), 3) whitelist_cnt,
+              ROUND((blacklist_cnt/100000000), 3) blacklist_cnt,
+              ROUND((unknown_cnt/100000000), 3) unknown_cnt,
+              ROUND(((whitelist_cnt + blacklist_cnt + unknown_cnt)/100000000), 3) all_cnt,
+              dt
+          FROM
+              dgw_url_verify_statistics_mon
+          WHERE
+              dt = 
+          IF(
+                    #{month} IS NOT NULL,
+                    DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                        IF(
+                            CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                            DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                            DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                        )
+                )
+      ) a JOIN (
+          SELECT
+              ROUND((whitelist_cnt/100000000), 3) whitelist_cnt,
+              ROUND((blacklist_cnt/100000000), 3) blacklist_cnt,
+              ROUND((unknown_cnt/100000000), 3) unknown_cnt,
+              ROUND(((whitelist_cnt + blacklist_cnt + unknown_cnt)/100000000), 3) all_cnt,
+              dt
+          FROM
+              dgw_url_verify_statistics_mon
+          WHERE 
+              dt = DATE_FORMAT(DATE_SUB(DATE_FORMAT(CONCAT(
+                
+        IF(
+                    #{month} IS NOT NULL,
+                    DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                        IF(
+                            CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                            DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                            DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                        )
+                )
+                
+                , '01'), '%Y%m%d'),INTERVAL 1 MONTH), '%Y%m')
+      ) b
+    </select>    
+</mapper>

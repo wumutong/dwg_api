@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="dgwURL" type="Map">
+      <result property="num" column="num" />
+      <result property="url" column="url"/> 
+      <result property="status" column="status"/> 
+    </resultMap>
+
+   <select id="execute" resultMap="dgwURL">    
+    select 
+    step1.phone as num,
+    step1.url,
+    step1.status
+    from
+    (
+    SELECT
+      phone, 
+        url, 
+        CASE status
+          WHEN -1 THEN '黑名单' 
+            WHEN 1 THEN '未识别' 
+            WHEN 2 THEN '白名单' 
+            ELSE '未识别'
+        END AS status
+    FROM
+      dgw_url_verify_demo
+    WHERE
+      phone IS NOT NULL
+      <if test="num != null">
+        AND phone = #{num}
+      </if>
+      <if test="url != null">
+        AND url = #{url}
+      </if>
+
+    )step1
+      where 
+      1=1
+        <if test="status != null">
+        AND step1.status = #{status}
+        </if>
+    </select>    
+</mapper>

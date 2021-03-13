@@ -1,0 +1,901 @@
+[WARN ] 2021-03-03 01:47:21.613 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h22s240ms).
+[WARN ] 2021-03-03 02:05:04.025 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m12s390ms).
+[WARN ] 2021-03-03 04:05:55.353 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h21s321ms).
+[WARN ] 2021-03-03 06:06:17.672 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h22s319ms).
+[WARN ] 2021-03-03 08:07:10.000 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h22s290ms).
+[WARN ] 2021-03-03 08:24:21.462 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m41s446ms).
+[WARN ] 2021-03-03 08:45:18.598 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m27s123ms).
+[INFO ] 2021-03-03 09:14:51.635 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 09:14:51.639 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 09:14:51.639 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 09:14:51.651 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 15:06:14.602 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 8480 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 15:06:14.606 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 15:06:16.089 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 15:06:16.101 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:06:16.101 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 15:06:16.101 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 15:06:16.209 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 15:06:16.210 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1545 ms
+[INFO ] 2021-03-03 15:06:16.878 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 15:06:16.878 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 15:06:16.903 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 15:06:18.927 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[ERROR] 2021-03-03 15:06:19.291 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 1 [/industTop7]
+[ERROR] 2021-03-03 15:06:19.293 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:82)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:380)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 20 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素内容必须由格式正确的字符数据或标记组成。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2637)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2734)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 24 common frames omitted
+[INFO ] 2021-03-03 15:06:19.307 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/test1] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@670ce331
+[ERROR] 2021-03-03 15:06:19.312 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 3 [/4]
+[ERROR] 2021-03-03 15:06:19.313 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 15:06:19.313 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 15:06:19.458 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:06:19.732 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:06:19.756 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:06:19.788 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 15:06:19.803 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 6.269 seconds (JVM running for 7.967)
+[INFO ] 2021-03-03 15:09:25.629 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 15:09:25.629 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 15:09:25.630 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 0 ms
+[WARN ] 2021-03-03 15:09:25.761 [http-nio-50288-exec-1] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /industTop7
+[WARN ] 2021-03-03 15:09:25.761 [http-nio-50288-exec-1] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /industTop7]
+[INFO ] 2021-03-03 15:11:52.046 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:11:52.055 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:11:52.056 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 15:11:52.084 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 15:11:56.321 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 8514 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 15:11:56.323 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 15:11:57.188 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 15:11:57.196 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:11:57.196 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 15:11:57.197 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 15:11:57.292 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 15:11:57.292 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 934 ms
+[INFO ] 2021-03-03 15:11:58.006 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 15:11:58.007 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 15:11:58.020 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 15:11:59.964 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[ERROR] 2021-03-03 15:12:00.294 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 1 [/industTop7]
+[ERROR] 2021-03-03 15:12:00.296 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:82)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:380)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 20 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素内容必须由格式正确的字符数据或标记组成。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2637)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2734)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 24 common frames omitted
+[INFO ] 2021-03-03 15:12:00.311 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/test1] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@36361ddb
+[ERROR] 2021-03-03 15:12:00.312 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 3 [/4]
+[ERROR] 2021-03-03 15:12:00.312 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 15:12:00.313 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 15:12:00.422 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:12:00.629 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:12:00.661 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:12:00.693 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 15:12:00.705 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 4.809 seconds (JVM running for 5.675)
+[INFO ] 2021-03-03 15:12:24.854 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:12:24.859 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:12:24.864 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 15:12:24.884 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 15:12:28.523 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 8523 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 15:12:28.525 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 15:12:29.521 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 15:12:29.534 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:12:29.535 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 15:12:29.535 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 15:12:29.647 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 15:12:29.647 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1083 ms
+[INFO ] 2021-03-03 15:12:30.162 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 15:12:30.162 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 15:12:30.177 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 15:12:32.165 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[ERROR] 2021-03-03 15:12:32.458 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 1 [/industTop7]
+[ERROR] 2021-03-03 15:12:32.460 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:82)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 29; 元素内容必须由格式正确的字符数据或标记组成。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:380)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 20 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素内容必须由格式正确的字符数据或标记组成。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2637)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2734)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 24 common frames omitted
+[INFO ] 2021-03-03 15:12:32.471 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/test1] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@cb03411
+[ERROR] 2021-03-03 15:12:32.472 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 3 [/4]
+[ERROR] 2021-03-03 15:12:32.472 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 15:12:32.472 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 15:12:32.571 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:12:32.776 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:12:32.803 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:12:32.851 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 15:12:32.864 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 4.614 seconds (JVM running for 5.52)
+[INFO ] 2021-03-03 15:21:16.654 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:21:16.670 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:21:16.671 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 15:21:16.687 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 15:21:21.036 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 8576 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 15:21:21.038 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 15:21:22.245 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 15:21:22.258 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:21:22.259 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 15:21:22.259 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 15:21:22.356 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 15:21:22.357 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1288 ms
+[INFO ] 2021-03-03 15:21:22.831 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 15:21:22.832 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 15:21:22.846 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 15:21:26.501 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 15:21:26.798 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@363a3d15
+[INFO ] 2021-03-03 15:21:26.807 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/test1] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@25da615a
+[ERROR] 2021-03-03 15:21:26.808 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 3 [/4]
+[ERROR] 2021-03-03 15:21:26.809 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 15:21:26.810 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 15:21:26.900 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 15:21:27.134 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 15:21:27.162 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 15:21:27.193 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 15:21:27.203 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 6.494 seconds (JVM running for 7.553)
+[INFO ] 2021-03-03 15:21:35.216 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 15:21:35.217 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 15:21:35.219 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 2 ms
+[WARN ] 2021-03-03 16:26:04.820 [http-nio-50288-exec-6] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 16:26:04.825 [http-nio-50288-exec-6] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 16:26:04.852 [http-nio-50288-exec-7] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 16:26:04.853 [http-nio-50288-exec-7] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 16:26:05.418 [http-nio-50288-exec-10] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 16:26:05.419 [http-nio-50288-exec-10] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 16:36:37.090 [http-nio-50288-exec-2] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /codeTop7
+[WARN ] 2021-03-03 16:36:37.095 [http-nio-50288-exec-2] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /codeTop7]
+[INFO ] 2021-03-03 16:36:52.910 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:36:52.913 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:36:52.914 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 16:36:52.919 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 16:36:57.453 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9018 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 16:36:57.455 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 16:36:58.318 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 16:36:58.326 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:36:58.327 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 16:36:58.328 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 16:36:58.431 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 16:36:58.432 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 947 ms
+[INFO ] 2021-03-03 16:36:59.165 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 16:36:59.166 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 16:36:59.188 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 16:37:01.028 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 16:37:01.551 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@22590e3e
+[INFO ] 2021-03-03 16:37:01.672 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@2b329bbd
+[ERROR] 2021-03-03 16:37:01.673 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 3 [/4]
+[ERROR] 2021-03-03 16:37:01.675 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 16:37:01.676 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 16:37:01.973 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:37:02.170 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:37:02.208 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:37:02.330 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 16:37:02.380 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 5.255 seconds (JVM running for 6.22)
+[INFO ] 2021-03-03 16:37:14.157 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:37:14.157 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:37:14.158 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 1 ms
+[WARN ] 2021-03-03 16:48:06.395 [http-nio-50288-exec-3] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 16:48:06.398 [http-nio-50288-exec-3] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 16:48:06.515 [http-nio-50288-exec-4] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 16:48:06.515 [http-nio-50288-exec-4] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 16:48:07.121 [http-nio-50288-exec-7] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 16:48:07.122 [http-nio-50288-exec-7] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[INFO ] 2021-03-03 16:51:18.700 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:51:18.704 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:51:18.706 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 16:51:18.720 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 16:51:22.695 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9176 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 16:51:22.699 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 16:51:24.317 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 16:51:24.324 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:51:24.324 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 16:51:24.325 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 16:51:24.419 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 16:51:24.419 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1680 ms
+[INFO ] 2021-03-03 16:51:24.889 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 16:51:24.890 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 16:51:24.910 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 16:51:26.969 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 16:51:27.295 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@11d4dbd6
+[INFO ] 2021-03-03 16:51:27.306 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@86733
+[INFO ] 2021-03-03 16:51:27.316 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7aa9e414
+[INFO ] 2021-03-03 16:51:27.329 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@4f453e63
+[ERROR] 2021-03-03 16:51:27.329 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 5 [/test]
+[ERROR] 2021-03-03 16:51:27.331 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 16:51:27.331 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 16:51:27.444 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:51:27.690 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:51:27.724 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:51:27.760 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 16:51:27.774 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 5.504 seconds (JVM running for 6.326)
+[INFO ] 2021-03-03 16:51:40.181 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:51:40.182 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:51:40.185 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 3 ms
+[ERROR] 2021-03-03 16:52:01.219 [http-nio-50288-exec-2] | [o.a.c.c.C.[.[.[.[dispatcherServlet].log:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6
+### The error may exist in file:////Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build/mapper-build-3.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT       scene_name, recognition_cnt     FROM       bi_screen_scene_recognition_month     WHERE       WHERE         dt =              IF(                 ? IS NOT NULL,                 DATE_FORMAT(STR_TO_DATE(?,'%Y-%m'), '%Y%m'),                      IF(                         CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) >= 10,                          DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'),                          DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')                     )             )     ORDER BY       recognition_cnt DESC
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6] with root cause
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy79.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy77.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:64)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy76.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy72.execute(Unknown Source)
+	at com.mfexcel.bigdata.openapi.controller.BaseController.handler(BaseController.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:807)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2021-03-03 16:52:05.606 [http-nio-50288-exec-3] | [o.a.c.c.C.[.[.[.[dispatcherServlet].log:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6
+### The error may exist in file:////Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build/mapper-build-3.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT       scene_name, recognition_cnt     FROM       bi_screen_scene_recognition_month     WHERE       WHERE         dt =              IF(                 ? IS NOT NULL,                 DATE_FORMAT(STR_TO_DATE(?,'%Y-%m'), '%Y%m'),                      IF(                         CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) >= 10,                          DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'),                          DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')                     )             )     ORDER BY       recognition_cnt DESC
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6] with root cause
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        dt = 
+            IF(
+                null IS NOT NULL,
+          ' at line 6
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy79.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy77.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:64)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy76.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy72.execute(Unknown Source)
+	at com.mfexcel.bigdata.openapi.controller.BaseController.handler(BaseController.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:807)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2021-03-03 16:52:59.643 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:52:59.648 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:52:59.650 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 16:52:59.662 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 16:53:04.313 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9198 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 16:53:04.316 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 16:53:05.374 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 16:53:05.381 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:53:05.382 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 16:53:05.383 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 16:53:05.462 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 16:53:05.462 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1110 ms
+[INFO ] 2021-03-03 16:53:05.987 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 16:53:05.988 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 16:53:06.009 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 16:53:07.926 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 16:53:08.225 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@25da615a
+[INFO ] 2021-03-03 16:53:08.233 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5acc9fdf
+[INFO ] 2021-03-03 16:53:08.242 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@1a891add
+[INFO ] 2021-03-03 16:53:08.250 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@387bf2d9
+[ERROR] 2021-03-03 16:53:08.250 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 5 [/test]
+[ERROR] 2021-03-03 16:53:08.252 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 16:53:08.252 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 16:53:08.347 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:53:08.498 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:53:08.525 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:53:08.553 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 16:53:08.564 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 4.806 seconds (JVM running for 6.036)
+[INFO ] 2021-03-03 16:53:24.245 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:53:24.247 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:53:24.249 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 2 ms
+[WARN ] 2021-03-03 16:55:17.436 [http-nio-50288-exec-3] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 16:55:17.439 [http-nio-50288-exec-3] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 16:55:17.494 [http-nio-50288-exec-4] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 16:55:17.494 [http-nio-50288-exec-4] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 16:55:18.161 [http-nio-50288-exec-7] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 16:55:18.161 [http-nio-50288-exec-7] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 16:56:22.989 [http-nio-50288-exec-9] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 16:56:22.991 [http-nio-50288-exec-9] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 16:56:23.051 [http-nio-50288-exec-10] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 16:56:23.052 [http-nio-50288-exec-10] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 16:56:23.633 [http-nio-50288-exec-3] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 16:56:23.633 [http-nio-50288-exec-3] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[INFO ] 2021-03-03 16:58:43.066 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:58:43.071 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:58:43.072 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 16:58:43.078 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 16:58:46.463 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9269 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 16:58:46.469 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 16:58:47.668 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 16:58:47.675 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:58:47.676 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 16:58:47.676 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 16:58:47.771 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 16:58:47.772 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1255 ms
+[INFO ] 2021-03-03 16:58:48.188 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 16:58:48.188 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 16:58:48.202 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 16:58:50.165 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 16:58:50.501 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@68f32020
+[INFO ] 2021-03-03 16:58:50.509 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5f780a86
+[INFO ] 2021-03-03 16:58:50.522 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@118102ee
+[INFO ] 2021-03-03 16:58:50.531 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@72d0f2b4
+[INFO ] 2021-03-03 16:58:50.539 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 5 [/industSentTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7dff6d05
+[INFO ] 2021-03-03 16:58:50.540 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 16:58:50.634 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 16:58:50.822 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 16:58:50.848 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 16:58:50.883 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 16:58:50.898 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 4.753 seconds (JVM running for 5.524)
+[INFO ] 2021-03-03 16:59:05.945 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:59:05.946 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 16:59:05.949 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 2 ms
+[INFO ] 2021-03-03 17:03:57.136 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 17:03:57.144 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 17:03:57.145 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 17:03:57.156 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 17:04:02.686 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9337 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 17:04:02.689 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 17:04:04.646 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 17:04:04.653 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 17:04:04.654 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 17:04:04.655 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 17:04:04.721 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 17:04:04.722 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 2001 ms
+[INFO ] 2021-03-03 17:04:05.158 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 17:04:05.158 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 17:04:05.178 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 17:04:07.401 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 17:04:07.816 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@43f61afb
+[INFO ] 2021-03-03 17:04:07.825 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@1ac45389
+[INFO ] 2021-03-03 17:04:07.833 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@367b22e5
+[INFO ] 2021-03-03 17:04:07.840 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@30e6a763
+[INFO ] 2021-03-03 17:04:07.847 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 5 [/industSentTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@36ddaebf
+[INFO ] 2021-03-03 17:04:07.857 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 6 [/bigIndustRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7c29adc8
+[ERROR] 2021-03-03 17:04:07.858 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 7 [/URLAcKnow]
+[ERROR] 2021-03-03 17:04:07.859 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[ERROR] 2021-03-03 17:04:07.860 [main] | [c.m.b.openapi.load.LoadMapperData.load:90] mapper build error --> 8 [/AcMom]
+[ERROR] 2021-03-03 17:04:07.860 [main] | [c.m.b.openapi.load.LoadMapperData.load:91] null
+java.lang.NullPointerException: null
+	at java.io.Writer.write(Writer.java:157)
+	at com.mfexcel.bigdata.openapi.load.LoadMapperData.load(LoadMapperData.java:75)
+	at com.mfexcel.bigdata.openapi.initialize.initService.afterPropertiesSet(initService.java:16)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.mfexcel.bigdata.openapi.MainApplication.main(MainApplication.java:12)
+[INFO ] 2021-03-03 17:04:07.860 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 17:04:07.956 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 17:04:08.164 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 17:04:08.275 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 17:04:08.304 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 17:04:08.317 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 5.954 seconds (JVM running for 7.254)
+[INFO ] 2021-03-03 17:04:11.628 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 17:04:11.628 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 17:04:11.629 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 1 ms
+[INFO ] 2021-03-03 17:22:56.816 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 17:22:56.823 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 17:22:56.824 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-03 17:22:56.832 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-03 17:23:01.627 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 9443 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-03-03 17:23:01.629 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-03 17:23:03.599 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-03 17:23:03.619 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 17:23:03.621 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-03 17:23:03.622 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-03 17:23:03.729 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-03 17:23:03.729 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 2062 ms
+[INFO ] 2021-03-03 17:23:04.235 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-03 17:23:04.236 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-03-03 17:23:04.249 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-03 17:23:06.011 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-03 17:23:06.457 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@664e5dee
+[INFO ] 2021-03-03 17:23:06.469 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop7] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@63bde6c2
+[INFO ] 2021-03-03 17:23:06.482 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@36fcf6c0
+[INFO ] 2021-03-03 17:23:06.497 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@62a4417
+[INFO ] 2021-03-03 17:23:06.509 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 5 [/industSentTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@68217d41
+[INFO ] 2021-03-03 17:23:06.521 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 6 [/bigIndustRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@62891fc8
+[INFO ] 2021-03-03 17:23:06.534 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 7 [/URLAcKnow] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@55e3d6c3
+[INFO ] 2021-03-03 17:23:06.546 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 8 [/AcMom] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3d6a6bee
+[INFO ] 2021-03-03 17:23:06.546 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-03 17:23:06.769 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-03 17:23:06.941 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-03 17:23:06.986 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-03 17:23:07.019 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-03 17:23:07.033 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 5.751 seconds (JVM running for 7.52)
+[INFO ] 2021-03-03 17:25:01.721 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-03-03 17:25:01.722 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-03-03 17:25:01.726 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 4 ms
+[WARN ] 2021-03-03 17:36:53.174 [http-nio-50288-exec-6] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 17:36:53.183 [http-nio-50288-exec-6] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 17:36:53.261 [http-nio-50288-exec-7] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 17:36:53.262 [http-nio-50288-exec-7] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 17:36:53.886 [http-nio-50288-exec-10] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 17:36:53.887 [http-nio-50288-exec-10] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 17:37:54.296 [http-nio-50288-exec-2] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 17:37:54.297 [http-nio-50288-exec-2] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 17:37:54.418 [http-nio-50288-exec-3] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 17:37:54.418 [http-nio-50288-exec-3] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 17:37:54.947 [http-nio-50288-exec-6] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 17:37:54.947 [http-nio-50288-exec-6] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 17:55:04.119 [http-nio-50288-exec-8] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 17:55:04.122 [http-nio-50288-exec-8] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 17:55:04.272 [http-nio-50288-exec-9] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 17:55:04.272 [http-nio-50288-exec-9] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 17:55:04.886 [http-nio-50288-exec-2] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 17:55:04.887 [http-nio-50288-exec-2] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 18:29:21.378 [http-nio-50288-exec-4] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexMsgKindDod
+[WARN ] 2021-03-03 18:29:21.383 [http-nio-50288-exec-4] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexMsgKindDod]
+[WARN ] 2021-03-03 18:29:21.426 [http-nio-50288-exec-5] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexDataTrend
+[WARN ] 2021-03-03 18:29:21.426 [http-nio-50288-exec-5] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexDataTrend]
+[WARN ] 2021-03-03 18:29:22.080 [http-nio-50288-exec-8] | [o.s.web.servlet.PageNotFound.handleNoHandlerFoundException:513] No handler found for POST /customerIndexChatbotDod
+[WARN ] 2021-03-03 18:29:22.081 [http-nio-50288-exec-8] | [o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException:207] Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /customerIndexChatbotDod]
+[WARN ] 2021-03-03 18:31:04.683 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:779] HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s73ms), soft-evicting connections from pool.
+[WARN ] 2021-03-03 19:01:26.073 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m21s389ms).
+[WARN ] 2021-03-03 20:35:11.893 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h33m15s815ms).
+[WARN ] 2021-03-03 21:41:16.007 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m4s114ms).
+[WARN ] 2021-03-03 23:42:10.557 [HikariPool-1 housekeeper] | [com.zaxxer.hikari.pool.HikariPool.run:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h22s176ms).

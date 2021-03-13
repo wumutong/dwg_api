@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="bigIndustRecogitionCnt" type="Map">
+      <result property="sceneFenlei" column="scene_fenlei" />
+      <result property="recognitionCnt" column="recognition_cnt"/>
+    </resultMap>
+
+   <select id="execute" resultMap="bigIndustRecogitionCnt">    
+      SELECT
+        scene_fenlei, recognition_cnt
+      FROM
+        bi_screen_scene_fenlei_recognition_month
+      WHERE
+        dt = 
+          IF(
+              #{month} IS NOT NULL,
+              DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                  IF(
+                      CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                      DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                      DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                  )
+          )
+      ORDER BY
+        recognition_cnt DESC
+    </select>    
+</mapper>

@@ -1,0 +1,67 @@
+[INFO ] 2021-02-26 16:08:44.627 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on bogon with PID 27496 (/Users/wumutong/project/bi-imos-demo/bigdata-openapi/target/classes started by wumutong in /Users/wumutong/project/bi-imos-demo/bigdata-openapi)
+[INFO ] 2021-02-26 16:08:44.630 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-02-26 16:08:45.992 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-02-26 16:08:46.005 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-02-26 16:08:46.006 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-02-26 16:08:46.006 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-02-26 16:08:46.110 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-02-26 16:08:46.111 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1382 ms
+[INFO ] 2021-02-26 16:08:46.735 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-02-26 16:08:46.736 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/bi-imos-demo/bigdata-openapi/mapper-build
+[INFO ] 2021-02-26 16:08:46.757 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-02-26 16:08:48.548 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-02-26 16:08:49.380 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/yyCustomerCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3d6a6bee
+[INFO ] 2021-02-26 16:08:49.393 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/yySupplierCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3cff0139
+[INFO ] 2021-02-26 16:08:49.403 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/yySentCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3effd4f3
+[INFO ] 2021-02-26 16:08:49.412 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/customerSentRecord] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6f4ade6e
+[INFO ] 2021-02-26 16:08:49.421 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 5 [/customerIndexMsgKindDod] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@186cb891
+[INFO ] 2021-02-26 16:08:49.430 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 6 [/yyCustomerCountMonth] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@53a5e217
+[INFO ] 2021-02-26 16:08:49.440 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 7 [/yySupplierCountMonth] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7c9bdee9
+[INFO ] 2021-02-26 16:08:49.450 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 8 [/customerSentCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@4e73b552
+[INFO ] 2021-02-26 16:08:49.468 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 9 [/customerIndexDataTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6b2e0f78
+[INFO ] 2021-02-26 16:08:49.480 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 10 [/customerIndexNeardata] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@64693226
+[INFO ] 2021-02-26 16:08:49.493 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 11 [/customerSentDetail] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6e1b9411
+[INFO ] 2021-02-26 16:08:49.515 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 12 [/yySentRecord] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3d49fd31
+[INFO ] 2021-02-26 16:08:49.555 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 13 [/yySentDetail] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3b2f4a93
+[INFO ] 2021-02-26 16:08:49.574 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 14 [/customerRevokeMsg] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7b78ed6a
+[INFO ] 2021-02-26 16:08:49.588 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 15 [/msg/send/details] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@31edeac
+[INFO ] 2021-02-26 16:08:49.620 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 16 [/customerChatbotDetail] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@b174a73
+[INFO ] 2021-02-26 16:08:49.638 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 17 [/customerChatbotList] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@67594471
+[INFO ] 2021-02-26 16:08:49.648 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 18 [/customerIndexChatbotDod] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6ae3fb94
+[INFO ] 2021-02-26 16:08:49.657 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 19 [/customerSenceCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@58516c91
+[INFO ] 2021-02-26 16:08:49.667 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 20 [/customerSenceCountWM] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@61e7bf2f
+[INFO ] 2021-02-26 16:08:49.675 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 21 [/customerActiveCntTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7c551ad4
+[INFO ] 2021-02-26 16:08:49.684 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 22 [/customerChatbotCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@367d2816
+[INFO ] 2021-02-26 16:08:49.690 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 23 [/customerChatbotTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@701bc94e
+[INFO ] 2021-02-26 16:08:49.700 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 24 [/customerSingleDataSendCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3d7b1f1c
+[INFO ] 2021-02-26 16:08:49.707 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 25 [/customerBtnDataSendCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@4726927c
+[INFO ] 2021-02-26 16:08:49.713 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 26 [/customerBtnDataSendTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@10ef5fa0
+[INFO ] 2021-02-26 16:08:49.721 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 27 [/customerAllDataSendCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5cb042da
+[INFO ] 2021-02-26 16:08:49.748 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 28 [/customerSingleDataSendTmlList] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6ffa56fa
+[INFO ] 2021-02-26 16:08:49.757 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 29 [/customerSingleDataSendBatchNoList] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@188b6035
+[INFO ] 2021-02-26 16:08:49.766 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 30 [/customerSingleDataTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6240651f
+[INFO ] 2021-02-26 16:08:49.782 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 31 [/customerTmpDataCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@51a8313b
+[INFO ] 2021-02-26 16:08:49.795 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 32 [/customerTmlDataTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@2009f9b0
+[INFO ] 2021-02-26 16:08:49.807 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 33 [/customerActiveCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3bd3d05e
+[INFO ] 2021-02-26 16:08:49.819 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 34 [/customerSenceAllCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@459cfcca
+[INFO ] 2021-02-26 16:08:49.840 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 35 [/customerSenceList] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7acfb656
+[INFO ] 2021-02-26 16:08:49.847 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 36 [/customerSencePlanCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@1416a80a
+[INFO ] 2021-02-26 16:08:49.854 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 37 [/customerActiveList] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@28f878a0
+[INFO ] 2021-02-26 16:08:49.863 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 38 [/customerZiChanCount] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7f5eae0f
+[INFO ] 2021-02-26 16:08:49.871 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 39 [/indexChatbotDod] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6bbe50c9
+[INFO ] 2021-02-26 16:08:49.879 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 40 [/index5GMsg] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@20011bf
+[INFO ] 2021-02-26 16:08:49.889 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 41 [/indexActiveTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5fb65013
+[INFO ] 2021-02-26 16:08:49.896 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 42 [/indexSceneTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@444cc791
+[INFO ] 2021-02-26 16:08:49.896 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-02-26 16:08:50.098 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-02-26 16:08:50.385 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-02-26 16:08:50.439 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-02-26 16:08:50.474 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-02-26 16:08:50.493 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 6.399 seconds (JVM running for 7.642)
+[INFO ] 2021-02-26 16:14:35.486 [http-nio-50288-exec-1] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-02-26 16:14:35.490 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:525] Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-02-26 16:14:35.501 [http-nio-50288-exec-1] | [o.s.web.servlet.DispatcherServlet.initServletBean:547] Completed initialization in 11 ms
+[INFO ] 2021-02-26 17:19:39.625 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-02-26 17:19:39.640 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-02-26 17:19:39.642 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-02-26 17:19:39.650 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.

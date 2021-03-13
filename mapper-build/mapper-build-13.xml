@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+    
+    <resultMap id="12321Cnt" type="Map">
+      <result property="totalCnt" column="total_cnt" />
+      <result property="spamCnt" column="spam_cnt"/>
+      <result property="spamRate" column="spam_rate" />
+      <result property="illegalCnt" column="illegal_cnt"/>
+      <result property="illegalRate" column="illegal_rate" />
+      <result property="otherCnt" column="other_cnt"/>
+      <result property="otherRate" column="other_rate" />    
+    </resultMap>
+
+   <select id="execute" resultMap="12321Cnt">    
+      SELECT 
+      total_cnt, spam_cnt, spam_rate, illegal_cnt, illegal_rate, other_cnt, other_rate
+      FROM 
+      dgw_bi_screen_12321_complaint_type_stat
+      WHERE
+        dt = 
+              IF(
+                          #{month} IS NOT NULL,
+                          DATE_FORMAT(STR_TO_DATE(#{month},'%Y-%m'), '%Y%m'), 
+                              IF(
+                                  CAST(DATE_FORMAT(CURDATE(),'%d') AS UNSIGNED INTEGER) &gt;= 10, 
+                                  DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 1 MONTH ),'%Y%m'), 
+                                  DATE_FORMAT(DATE_SUB( CURDATE( ), INTERVAL 2 MONTH ),'%Y%m')
+                              )
+                  )
+    </select>    
+</mapper>

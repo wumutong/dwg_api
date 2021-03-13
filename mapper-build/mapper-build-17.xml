@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfexcel.bigdata.openapi.mapper.BaseMapper">
+
+
+
+    <resultMap id="DgwCategoryMsgConfigDomain" type="Map">
+        <id property="id" column="id" />
+        <result property="categoryNameModel" column="category_name_model"/>
+        <result property="code" column="code"/>
+        <result property="categoryName" column="category_name"/>
+        <result property="operator" column="operator"/>
+    </resultMap>
+
+    <insert id="insertExecute" parameterType="Map">
+        INSERT INTO
+        dgw_category_msg_config(`category_name_model`, `code`, `category_name`,`operator`,`create_time`,`update_time`)
+        VALUES (#{categoryNameModel}, #{code}, #{categoryName},#{operator},CURRENT_TIME,CURRENT_TIME)
+    </insert>  
+
+</mapper>
