@@ -2653,3 +2653,42 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 [INFO ] 2021-03-13 19:18:26.311 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
 [INFO ] 2021-03-13 19:18:26.313 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
 [INFO ] 2021-03-13 19:18:26.323 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
+[INFO ] 2021-03-13 19:23:25.686 [main] | [c.m.bigdata.openapi.MainApplication.logStarting:55] Starting MainApplication using Java 1.8.0_271 on wumutongdeMacBook-Pro.local with PID 3363 (/Users/wumutong/project/github/dwg_api/target/classes started by wumutong in /Users/wumutong/project/github/dwg_api)
+[INFO ] 2021-03-13 19:23:25.693 [main] | [c.m.bigdata.openapi.MainApplication.logStartupProfileInfo:660] No active profile set, falling back to default profiles: default
+[INFO ] 2021-03-13 19:23:26.870 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.initialize:108] Tomcat initialized with port(s): 50288 (http)
+[INFO ] 2021-03-13 19:23:26.879 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Initializing ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-13 19:23:26.880 [main] | [o.a.catalina.core.StandardService.log:173] Starting service [Tomcat]
+[INFO ] 2021-03-13 19:23:26.880 [main] | [o.a.catalina.core.StandardEngine.log:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-03-13 19:23:26.971 [main] | [o.a.c.c.C.[Tomcat].[localhost].[/].log:173] Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-03-13 19:23:26.972 [main] | [o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:289] Root WebApplicationContext: initialization completed in 1232 ms
+[INFO ] 2021-03-13 19:23:27.457 [main] | [c.m.b.openapi.load.LoadMapperData.load:45] load mapper starting...
+[INFO ] 2021-03-13 19:23:27.457 [main] | [c.m.b.openapi.load.LoadMapperData.load:48] mapper build path --> /Users/wumutong/project/github/dwg_api/mapper-build
+[INFO ] 2021-03-13 19:23:27.472 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:110] HikariPool-1 - Starting...
+[INFO ] 2021-03-13 19:23:29.145 [main] | [com.zaxxer.hikari.HikariDataSource.getConnection:123] HikariPool-1 - Start completed.
+[INFO ] 2021-03-13 19:23:29.763 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 1 [/industTop10] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@4efc25fc
+[INFO ] 2021-03-13 19:23:29.771 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 2 [/codeTop10] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3a5c2626
+[INFO ] 2021-03-13 19:23:29.779 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 3 [/sceneRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5176d279
+[INFO ] 2021-03-13 19:23:29.787 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 4 [/codeTop] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@74aa9c72
+[INFO ] 2021-03-13 19:23:29.795 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 5 [/industSentTrend] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@5533dc72
+[INFO ] 2021-03-13 19:23:29.801 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 6 [/bigIndustRecogitionCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@2a32fb6
+[INFO ] 2021-03-13 19:23:29.809 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 7 [/URLAcKnow] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@f3021cb
+[INFO ] 2021-03-13 19:23:29.816 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 8 [/AcMom] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6869a3b3
+[INFO ] 2021-03-13 19:23:29.826 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 9 [/numResourceCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@cb03411
+[INFO ] 2021-03-13 19:23:29.836 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 10 [/categoryCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6dd82486
+[INFO ] 2021-03-13 19:23:29.846 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 11 [/pubCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@7026b7ee
+[INFO ] 2021-03-13 19:23:29.857 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 12 [/operatorCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@713064e8
+[INFO ] 2021-03-13 19:23:29.866 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 13 [/12321Cnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3e5d4f6b
+[INFO ] 2021-03-13 19:23:29.881 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 14 [/numSendCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@fca387
+[INFO ] 2021-03-13 19:23:29.887 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 15 [/numSignSendCnt] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@38320e34
+[INFO ] 2021-03-13 19:23:29.894 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 16 [/dgwURL] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@3effd4f3
+[INFO ] 2021-03-13 19:23:29.900 [main] | [c.m.b.openapi.load.LoadMapperData.load:88] mapper build success --> 17 [/insertTest] org.apache.ibatis.session.defaults.DefaultSqlSessionFactory@6f4ade6e
+[INFO ] 2021-03-13 19:23:29.900 [main] | [c.m.b.openapi.load.LoadMapperData.load:95] load mapper finished...
+[INFO ] 2021-03-13 19:23:30.064 [main] | [o.s.s.c.ThreadPoolTaskExecutor.initialize:181] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-13 19:23:30.193 [main] | [o.s.s.c.ThreadPoolTaskScheduler.initialize:181] Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-03-13 19:23:30.220 [main] | [o.a.coyote.http11.Http11NioProtocol.log:173] Starting ProtocolHandler ["http-nio-50288"]
+[INFO ] 2021-03-13 19:23:30.248 [main] | [o.s.b.w.e.tomcat.TomcatWebServer.start:220] Tomcat started on port(s): 50288 (http) with context path ''
+[INFO ] 2021-03-13 19:23:30.260 [main] | [c.m.bigdata.openapi.MainApplication.logStarted:61] Started MainApplication in 5.056 seconds (JVM running for 6.065)
+[INFO ] 2021-03-13 19:23:35.851 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskScheduler.shutdown:218] Shutting down ExecutorService 'taskScheduler'
+[INFO ] 2021-03-13 19:23:35.854 [SpringContextShutdownHook] | [o.s.s.c.ThreadPoolTaskExecutor.shutdown:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-03-13 19:23:35.855 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:350] HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-03-13 19:23:36.954 [SpringContextShutdownHook] | [com.zaxxer.hikari.HikariDataSource.close:352] HikariPool-1 - Shutdown completed.
